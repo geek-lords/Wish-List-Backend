@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish List</title>
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+
+<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div style="display: none" id="hideAll">&nbsp;</div>
+    <script type="text/javascript">
+        document.getElementById("hideAll").style.display = "block";
+      </script> 
+<div class="container-fluid p-0">
+    <div class="row">
+      <div class="col-md-5 col-sm-12 border border-dark p-0" id="left-div">
+        <img src="jodie-walton-t0W9cVg4k9o-unsplash.jpg" alt="Christmas Gifts">
+      </div>
+      <div class="col-md-7 col-sm-12 d-flex flex-column text-center bg-white p-0"> 
+        <div id="countdown" class="h-25 p-4 align-self-auto d-flex flex-row justify-content-end text-dark align-items-center">
+          <div class="m-2" style="color: black">
+              <h2 id="days" class=" font-weight-bold">00</h2><h4 style="color: white">Days</h4>
+          </div>
+          <div class="m-2" style="color:black">
+              <h2 id="hours" class=" font-weight-bold">00</h2><h4 style="color: white">Hours</h4>
+          </div>
+          <div class="m-2" style="color: black">
+              <h2 id="mins" class=" font-weight-bold">00</h2><h4 style="color: white">Mins</h4>
+          </div>
+          <div class="m-2" style="color: black">
+              <h2 id="secs" class=" font-weight-bold">00</h2><h4 style="color: white">Sec</h4>
+          </div>
+        </div>
+
+          <div class="m-4 p-3">
+            
+            <h1 class="p-2 font-weight-normal text-lg-left display-2">My<span style="color: rgb(3, 32, 110);">Wish</span>.com</h1>
+            <h3 class="p-2 font-weight-bold text-lg-left text-dark">Collaboratively find out what gifts do people around the world wish to get this Christmas.</h3>
+          </div>
+          <div id="get-started" class="h-25">
+            <button class="btn btn-lg align-bottom" style="background-color: rgb(3, 32, 110);color: white;outline: none;" onclick="redirect()">Get Started</button>
+          </div>
+      </div>
+    </div>
+  </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
