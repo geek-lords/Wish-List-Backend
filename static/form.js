@@ -98,7 +98,7 @@ function searchWish() {
         } else {
             chooseDiv.style.display = 'block';
             $('#select-wish').empty();
-            $('#select-wish').append(`<option value="default" selected disabled>'${val}' suggestions</option>`);
+            $('#select-wish').append(`<option value="default" selected disabled>'${search.value}' suggestions</option>`);
             // get wishes with API from server
 
             let temp = wishes.filter(w => w.name.toLowerCase().startsWith(search.value.toLowerCase()));
