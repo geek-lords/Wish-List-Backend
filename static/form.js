@@ -32,13 +32,11 @@ function validateMaxInputs() {
         document.getElementById('submit-btn').style.display = 'block';
         document.getElementById('inp-search').disabled = true;
         document.getElementById('select-wish').disabled = true;
-        document.getElementById('create-wish-inp').disabled = true;
         document.getElementById('create-wish-btn').disabled = true;
     } else {
         document.getElementById('submit-btn').style.display = 'none';
         document.getElementById('inp-search').disabled = false;
         document.getElementById('select-wish').disabled = false;
-        document.getElementById('create-wish-inp').disabled = false;
         document.getElementById('create-wish-btn').disabled = false;
     }
     if (country_id == null) {
@@ -99,6 +97,7 @@ function searchWish() {
             chooseDiv.style.display = 'block';
             $('#select-wish').empty();
             $('#select-wish').append(`<option value="default" selected disabled>'${search.value}' suggestions</option>`);
+            document.getElementById('create-wish-btn').innerHTML = 'Create new wish '+search.value;
             // get wishes with API from server
 
             let temp = wishes.filter(w => w.name.toLowerCase().startsWith(search.value.toLowerCase()));
@@ -136,7 +135,7 @@ function createChip(wish, id) {
 }
 
 function createWish() {
-    var create_wish_input = document.getElementById('create-wish-inp');
+    var create_wish_input = document.getElementById('inp-search');
     var create_wish_btn = document.getElementById('create-wish-btn');
     create_wish_btn.addEventListener('click', function () {
         var wish = create_wish_input.value;
