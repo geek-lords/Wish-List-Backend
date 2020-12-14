@@ -187,7 +187,7 @@ function selectCountry() {
 
 function copy(){
     var dummy = document.createElement('input'),
-    text = window.location.href;
+    text = "https://mywish2020.herokuapp.com";
 
 document.body.appendChild(dummy);
 dummy.value = text;
@@ -256,7 +256,7 @@ function submitForm() {
                 leftDivHtml += `</tbody>
             </table>
             <div class="alert alert-success">
-                <strong>Loved it?</strong> Share it with your friends! <a href="" class="alert-link" onclick='copy()'>Click here to copy</a>.
+                <strong>Loved it?</strong><a href="#" class="alert-link" onclick='copy()'>Share it with your friends!</a>.
                 <br><strong>OR</strong><br><a href="https://mywish2020.herokuapp.com/form.html" class="alert-link">Try it again</a>.
             </div>`;
 
