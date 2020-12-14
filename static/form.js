@@ -257,7 +257,8 @@ function submitForm() {
                 leftDivHtml += `</tbody>
             </table>
             <div class="alert alert-success">
-                <strong>Loved it?</strong> Share it wish your friends! <a href="#" class="alert-link" onclick='copy()'>Click here to copy</a>.
+                <strong>Loved it?</strong> Share it with your friends! <a href="#" class="alert-link" onclick='copy()'>Click here to copy</a>.
+                <r><strong>OR</strong><br><a href="https://mywish2020.herokuapp.com/form.html" class="alert-link">Try it again</a>.
             </div>`;
 
                 // Use the json data received from response
