@@ -5,7 +5,9 @@
 .container-fluid {
     overflow: hidden;
 }
-
+html,body {
+  height: 100%;
+}
 #left-div{
     background-image: url('Corner Plants-1.png'),url('Corner Plants.png'),url(santa.svg), url(Present1.svg), url(Present2.svg);
     background-position: top left, top right, bottom left, 20% 100%, 25% 100%;
