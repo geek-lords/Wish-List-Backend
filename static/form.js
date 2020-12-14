@@ -186,6 +186,18 @@ function selectCountry() {
     })
 }
 
+function copy(){
+    var dummy = document.createElement('input'),
+    text = window.location.href;
+
+document.body.appendChild(dummy);
+dummy.value = text;
+dummy.select();
+document.execCommand('copy');
+document.body.removeChild(dummy);
+alert('Link copied!');
+}
+
 function submitForm() {
     var submit = document.getElementById('submit-btn');
     submit.addEventListener('click', function () {
@@ -245,7 +257,7 @@ function submitForm() {
                 leftDivHtml += `</tbody>
             </table>
             <div class="alert alert-success">
-                <strong>Loved it?</strong> Check out what wishes are topping the charts globally! <a href="#" class="alert-link">Click here</a>.
+                <strong>Loved it?</strong> Share it wish your friends! <a href="#" class="alert-link" onclick='copy()'>Click here to copy</a>.
             </div>`;
 
                 // Use the json data received from response
