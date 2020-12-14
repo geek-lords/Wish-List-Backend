@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, send_from_directory
 
 from config import DEBUG
 from country import countries
@@ -69,6 +69,21 @@ def createmail():
         return {}
     except(KeyError, InvalidInput) : 
         return {'error' : 0}, 400, {'Content-Type' : 'application/json'}
+
+    
+@app.route('/<path:path>')
+def front_end_routes(path):
+    return send_from_directory('static', path)
+
+
+@app.route('/')
+def index():
+    return send_from_directory('static', 'index.html')
+
+
+@app.route('/form')
+def form():
+    return send_from_directory('static', 'form.html')
 
 
 def _to_json(gifts):
