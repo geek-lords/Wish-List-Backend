@@ -286,7 +286,7 @@ function submitForm() {
                     <h5 class="text-uppercase">Developers</h5>
                     <ul class="list-unstyled">
                         <li>
-                            <a href="https://github.com/geek-lords">Geek Lords (Organization)</a>
+                            <a href="https://github.com/geek-lords">Geek Lords (Team)</a>
                         </li>
                         <li>
                             <a href="https://github.com/HemilTheRebel">Hemil Ruparel (Back-end)</a>
