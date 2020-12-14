@@ -46,7 +46,7 @@
 Extra small devices (portrait phones, less than 544px) 
 No media query since this is the default in Bootstrap because it is "mobile first"
 */
-h1 {font-size:1.5rem;} /*1rem = 16px*/
+h1 {font-size:3rem;} /*1rem = 16px*/
 /*
 ####################################################
 M E D I A  Q U E R I E S
