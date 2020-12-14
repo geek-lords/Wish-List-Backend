@@ -119,6 +119,7 @@ function selectWish() {
         if (option_value != 'default') {
             createChip(option_name, option_value);
             validateMaxInputs();
+            document.getElementById('inp-search').value = "";
         }
     });
 }
@@ -151,7 +152,8 @@ function createWish() {
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (response) {
-                    createChip(wish, response.wish_id)
+                    createChip(wish, response.wish_id);
+                    document.getElementById('inp-search').value = "";
                 },
                 error: function (jqXHR, status, err) {
                     alert(`Wish '${wish}' already exists.`);
