@@ -257,6 +257,8 @@ function submitForm() {
                 }
                 leftDivHtml += `</tbody>
             </table>
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email"> 
             <div class="alert alert-success">
                 <strong>Loved it?</strong><a href="#" class="alert-link" onclick='copy()'> Share it with your friends!</a>.
                 <br><strong>OR</strong><br><a href="https://mywish2020.herokuapp.com/form.html" class="alert-link">Try it again</a>.
