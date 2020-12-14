@@ -290,11 +290,11 @@ function submitForm() {
                 $('#left-div').html(leftDivHtml);
 
                 $('.row').append(`
-        <footer class="page-footer font-small blue pt-4 w-100 bg-secondary">
+        <footer class="page-footer font-small blue pt-4 w-100">
         <center>
         <div id='email-div col-12' class="p-3">
         <label for="email" class="text-center align-self-center">Enter your email for more updates:</label><br>
-        <input id="inp-mail" class="form-control m-3 w-75 align-self-center shadow text-center" style="color: rgb(3, 32, 110);" type="email" placeholder="Email" aria-label="Email"> 
+        <input id="inp-mail" class="form-control m-3 w-50 align-self-center shadow text-center" style="color: rgb(3, 32, 110);" type="email" placeholder="Email" aria-label="Email"> 
         <button class='btn btn-lg btn-primary align-self-center' onclick="sendEmail()">Submit</button>
         </div>
         <div class="alert col-12">
