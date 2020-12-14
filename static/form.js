@@ -219,7 +219,7 @@ function sendEmail(){
                 alert('Thanks! Email submitted successfully.');
             },
             error: function (jqXHR, status, err) {
-                alert(`Your Email couldn't be submitted.`);
+                alert(`E-Mail already exists.`);
             },
         });
     }
