@@ -1,14 +1,15 @@
-from flask import Flask, request, send_from_directory
+from flask import Flask, request
 
 from config import DEBUG
 from country import countries
 from exceptions import InvalidInput
 from submit import submit
 from wish import create_wish, wishes
+from mail import email
 
 app = Flask(__name__)
 
-
+createnew
 @app.route('/v1/countries')
 def get_countries():
     temp = countries()
@@ -58,20 +59,16 @@ def createwish():
     except (KeyError, InvalidInput):
         return {'error': 0}, 400, {'Content-Type': 'application/json'}
 
-
-@app.route('/<path:path>')
-def front_end_routes(path):
-    return send_from_directory('static', path)
-
-
-@app.route('/')
-def index():
-    return send_from_directory('static', 'index.html')
-
-
-@app.route('/form')
-def form():
-    return send_from_directory('static', 'form.html')
+@app.route("/v1/addmail",methods=['POST'])
+def createmail():
+    try : 
+        if not request.is_json : 
+            raise InvalidInput
+        mail1 = request.json['email']
+        email(mail1)
+        return {}
+    except(KeyError, InvalidInput) : 
+        return {'error' : 0}, 400, {'Content-Type' : 'application/json'}
 
 
 def _to_json(gifts):
