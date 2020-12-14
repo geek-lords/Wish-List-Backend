@@ -5,8 +5,8 @@
 .container-fluid {
     overflow: hidden;
 }
-html,body {
-  height: 100%;
+html, body, .container-fluid, .row {
+  min-height: 100vh;
 }
 #left-div{
     background-image: url('Corner Plants-1.png'),url('Corner Plants.png'),url(santa.svg), url(Present1.svg), url(Present2.svg);
