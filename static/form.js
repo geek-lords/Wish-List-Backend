@@ -290,7 +290,8 @@ function submitForm() {
                 $('#left-div').html(leftDivHtml);
 
                 $('.row').append(`
-                <div class="w-50 align-self-center">
+                <center>
+                <div class="w-100 align-self-center">
                 <div id='email-div w-100' class="p-3">
                 <label for="email" class="text-center align-self-center">Enter your email for more updates:</label><br>
                 <input id="inp-mail" class="form-control m-3 w-75 align-self-center shadow text-center" style="color: rgb(3, 32, 110);" type="email" placeholder="Email" aria-label="Email"> 
@@ -301,7 +302,8 @@ function submitForm() {
                 <br><strong>OR</strong><br><a href="https://mywish2020.herokuapp.com/form.html" class="alert-link">Try it again</a>.
                 </div>
                 </div>
-        <footer class="page-footer font-small blue pt-4 w-100">
+                </center>
+        <footer class="page-footer font-small blue pt-4 w-100 bg-secondary">
         <!-- Footer Links -->
         <div class="container-fluid text-center text-md-left">
             <!-- Grid row -->
