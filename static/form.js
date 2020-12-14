@@ -198,9 +198,31 @@ document.execCommand('copy');
 document.body.removeChild(dummy);
 alert('Link copied!');
 }
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
 
 function sendEmail(){
-
+    var inp_email = document.getElementById('inp-mail');
+    var email = inp_email.value;
+    if(!validateEmail(email))
+    alert("You have entered an invalid email address!")
+    else{
+        $.ajax({
+            type: "POST",
+            url: "v1/addmail",
+            data: JSON.stringify({"email": email}),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                alert('Thanks! Email submitted successfully.');
+            },
+            error: function (jqXHR, status, err) {
+                alert(`Your Email couldn't be submitted.`);
+            },
+        });
+    }
 }
 
 function submitForm() {
@@ -261,10 +283,10 @@ function submitForm() {
                 }
                 leftDivHtml += `</tbody>
             </table>
-            <div id='email-div'>
-            <label for="email" class="text-center">Enter your email for more updates:</label>
-            <input id="inp-search" class="form-control m-3 w-75 align-self-center shadow text-center" style="color: rgb(3, 32, 110);" type="email" placeholder="Email" aria-label="Email"> 
-            <button class='btn btn-lg btn-primary align-self-center'>Submit</button>
+            <div id='email-div' class="p-3">
+            <label for="email" class="text-center align-self-center">Enter your email for more updates:</label><br>
+            <input id="inp-mail" class="form-control m-3 w-75 align-self-center shadow text-center" style="color: rgb(3, 32, 110);" type="email" placeholder="Email" aria-label="Email"> 
+            <button class='btn btn-lg btn-primary align-self-center' onclick="sendEmail()">Submit</button>
             </div>
             <div class="alert alert-success">
                 <strong>Loved it?</strong><a href="#" class="alert-link" onclick='copy()'> Share it with your friends!</a>.
