@@ -283,20 +283,20 @@ function submitForm() {
                 <!-- Grid column -->
                 <div class="col-md-3 mb-md-0 mb-3">
                     <!-- Links -->
-                    <h5 class="text-uppercase">Devoplers</h5>
+                    <h5 class="text-uppercase">Developers</h5>
                     <ul class="list-unstyled">
                         <li>
                             <a href="https://github.com/geek-lords">Geek Lords (Organization)</a>
                         </li>
                         <li>
-                            <a href="https://github.com/HemilTheRebel">Hemil Ruparel (Back-end Developer)</a>
+                            <a href="https://github.com/HemilTheRebel">Hemil Ruparel (Back-end)</a>
                         </li>
                         <li>
-                            <a href="https://github.com/SarveshJoshi25">Sarvesh Joshi (Back-end Developer)</a>
+                            <a href="https://github.com/SarveshJoshi25">Sarvesh Joshi (Back-end)</a>
                         </li>
                         <li>
-                            <a href="https://github.com/abhiraj-kale">Abhiraj Kale (Front-end Developer)</a>
-                        </li>
+                            <a href="https://github.com/abhiraj-kale">Abhiraj Kale (Front-end)</a>
+                        </li
                         <li>
                             <a href="https://github.com/lmNoob">Rohan Yadav (Website Designer)</a>
                         </li>
