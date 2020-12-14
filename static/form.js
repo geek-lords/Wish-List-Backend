@@ -257,8 +257,11 @@ function submitForm() {
                 }
                 leftDivHtml += `</tbody>
             </table>
-            <label for="email">Enter your email:</label>
-            <input type="email" id="email" name="email"> 
+            <div id='email-div'>
+            <label for="email">Enter your email for more updates:</label>
+            <input id="inp-search" class="form-control m-3 w-75 align-self-center shadow text-center" style="color: rgb(3, 32, 110);" type="email" placeholder="Email" aria-label="Email"> 
+            <button class='btn btn-lg btn-primary align-self-center'>Submit</button>
+            </div>
             <div class="alert alert-success">
                 <strong>Loved it?</strong><a href="#" class="alert-link" onclick='copy()'> Share it with your friends!</a>.
                 <br><strong>OR</strong><br><a href="https://mywish2020.herokuapp.com/form.html" class="alert-link">Try it again</a>.
