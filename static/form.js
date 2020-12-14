@@ -267,7 +267,7 @@ function submitForm() {
                 $('#left-div').html(leftDivHtml);
 
                 $('.row').append(`
-                <footer class="page-footer font-small blue pt-4">
+        <footer class="page-footer font-small blue pt-4 w-100">
         <!-- Footer Links -->
         <div class="container-fluid text-center text-md-left">
             <!-- Grid row -->
