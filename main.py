@@ -9,7 +9,7 @@ from mail import email
 
 app = Flask(__name__)
 
-createnew
+
 @app.route('/v1/countries')
 def get_countries():
     temp = countries()
