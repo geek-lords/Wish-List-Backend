@@ -57,6 +57,9 @@ function getCountries() {
         dataType: "json",
         success: function (data) {
             var countries = data.countries;
+            $('#select-country').empty();
+            $('#select-country').append(`<option value="default" selected disabled>Choose your country</option>`);
+            
             for (i = 0; i < countries.length; i++) {
                 addOption('select-country', countries[i].name, countries[i].id);
             }
@@ -74,10 +77,6 @@ function getWishes() {
         dataType: "json",
         success: function (data) {
             wishes = data.wishes;
-
-            for (i = 0; i < wishes.length; i++) {
-                addOption('select-wish', wishes[i].name, wishes[i].id);
-            }
         },
         error: function (jqXHR, status, err) {
             alert(status + ":" + err);
@@ -155,7 +154,7 @@ function createWish() {
                     createChip(wish, response.wish_id)
                 },
                 error: function (jqXHR, status, err) {
-                    alert(status + ":" + err);
+                    alert(`Wish '${wish}' already exists.`);
                 },
             });
             validateMaxInputs();
