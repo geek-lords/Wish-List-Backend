@@ -258,10 +258,16 @@ function submitForm() {
                 leftDivHtml += `</tbody>
             </table>
             <div class="alert alert-success">
-                <strong>Loved it?</strong><a href="#" class="alert-link" onclick='copy()'>Share it with your friends!</a>.
+                <strong>Loved it?</strong><a href="#" class="alert-link" onclick='copy()'> Share it with your friends!</a>.
                 <br><strong>OR</strong><br><a href="https://mywish2020.herokuapp.com/form.html" class="alert-link">Try it again</a>.
             </div>
-            <footer class="page-footer font-small blue pt-4" style="background-image: url('2.jpg');">
+            `;
+
+                // Use the json data received from response
+                $('#left-div').html(leftDivHtml);
+
+                $('.row').append(`
+                <footer class="page-footer font-small blue pt-4">
         <!-- Footer Links -->
         <div class="container-fluid text-center text-md-left">
             <!-- Grid row -->
@@ -328,10 +334,7 @@ function submitForm() {
         <center><span class="text-center">Project by - Geek Lords, Pune, India.</span></center>
         <!-- Copyright -->
     </footer>
-            `;
-
-                // Use the json data received from response
-                $('#left-div').html(leftDivHtml);
+                `);
             },
             error: function (jqXHR, status, err) {
                 alert(status + ":" + err);
