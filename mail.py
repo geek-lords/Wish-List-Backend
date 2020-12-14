@@ -2,6 +2,7 @@ from connection_manager import connection
 from exceptions import InvalidInput
 import logging
 import os
+import email_validator
 from email.message import EmailMessage
 from email.mime.text import MIMEText
 from smtplib import SMTP_SSL, SMTPException, SMTP
@@ -47,13 +48,16 @@ def sendNotification(emailid):
 
 
 def email(emailaddress):
+    try :
+        email_validator.validate_email(emailaddress)
+    except email_validator.EmailNotValidError: 
+        raise InvalidInput 
     with connection() as conn, conn.cursor() as cur :
-        cur.execute("SELECT * from email where email_id = %s ",(emailaddress,))
+        cur.execute("SELECT email_id from email where email_id = %s ",(emailaddress,))
         if cur.rowcount == 1 :
             raise InvalidInput
         cur.execute("INSERT INTO email(email_id) values (%s)",(emailaddress,))
         conn.commit()
-        return None
 
 def emailNotification():
     with connection() as conn, conn.cursor() as cur :
@@ -63,4 +67,4 @@ def emailNotification():
             
 
 if __name__ == "__main__":
-    emailNotification()
+    pass 
