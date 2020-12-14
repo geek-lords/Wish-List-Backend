@@ -199,6 +199,10 @@ document.body.removeChild(dummy);
 alert('Link copied!');
 }
 
+function sendEmail(){
+
+}
+
 function submitForm() {
     var submit = document.getElementById('submit-btn');
     submit.addEventListener('click', function () {
@@ -258,7 +262,7 @@ function submitForm() {
                 leftDivHtml += `</tbody>
             </table>
             <div id='email-div'>
-            <label for="email">Enter your email for more updates:</label>
+            <label for="email" class="text-center">Enter your email for more updates:</label>
             <input id="inp-search" class="form-control m-3 w-75 align-self-center shadow text-center" style="color: rgb(3, 32, 110);" type="email" placeholder="Email" aria-label="Email"> 
             <button class='btn btn-lg btn-primary align-self-center'>Submit</button>
             </div>
