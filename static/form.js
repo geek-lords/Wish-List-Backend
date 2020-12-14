@@ -260,7 +260,75 @@ function submitForm() {
             <div class="alert alert-success">
                 <strong>Loved it?</strong><a href="#" class="alert-link" onclick='copy()'>Share it with your friends!</a>.
                 <br><strong>OR</strong><br><a href="https://mywish2020.herokuapp.com/form.html" class="alert-link">Try it again</a>.
-            </div>`;
+            </div>
+            <footer class="page-footer font-small blue pt-4" style="background-image: url('2.jpg');">
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <!-- Content -->
+                    <h5 class="text-lowercase text-primary">myWish2020.herokuapp.com</h5>
+                    <p>Collaboratively find out what gifts do people around the world<br> wish to get this Christmas.<br>Let's See how people from different nations wish for Xmas.</p>
+                </div>
+                <!-- Grid column -->
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Devoplers</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://github.com/geek-lords">Geek Lords (Organization)</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/HemilTheRebel">Hemil Ruparel (Back-end Developer)</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/SarveshJoshi25">Sarvesh Joshi (Back-end Developer)</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/abhiraj-kale">Abhiraj Kale (Front-end Developer)</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/lmNoob">Rohan Yadav (Website Designer)</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <!-- Links -->
+                    <h5 class="text">Follow us on Instagram</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.instagram.com/rahem027/">Hemil Ruparel</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/_sarveshjoshi/">Sarvesh Joshi</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/aww_bhiraj/">Abhiraj Kale</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/yrohan03/">Rohan Yadav</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">If you've any queries/ problems Contact us at -
+            <a href="mailto:whatisyourwish.geeklords@gmail.com">whatisyourwish.geeklords@gmail.com</a>
+        </div>
+        <center><span class="text-center">Project by - Geek Lords, Pune, India.</span></center>
+        <!-- Copyright -->
+    </footer>
+            `;
 
                 // Use the json data received from response
                 $('#left-div').html(leftDivHtml);
