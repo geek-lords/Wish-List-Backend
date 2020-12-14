@@ -273,7 +273,7 @@ function submitForm() {
             <!-- Grid row -->
             <div class="row">
                 <!-- Grid column -->
-                <div class="col-md-6 mt-md-0 mt-3">
+                <div class="col-md-6 mt-md-0 m-3">
                     <!-- Content -->
                     <h5 class="text-lowercase text-primary">myWish2020.herokuapp.com</h5>
                     <p>Collaboratively find out what gifts do people around the world<br> wish to get this Christmas.<br>Let's See how people from different nations wish for Xmas.</p>
