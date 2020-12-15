@@ -1,3 +1,5 @@
+import re
+
 from connection_manager import connection
 from exceptions import InvalidInput
 
@@ -25,15 +27,19 @@ def wishes():
 
         return result
 
+
 def create_wish(name):
-    with connection() as conn, conn.cursor() as cur : 
-        cur.execute('Select id from wish where name = %s ',(name,))
-        if cur.rowcount == 1: 
+    if re.search('^[\w\d\s]+$', name) is None:
+        raise InvalidInput
+
+    with connection() as conn, conn.cursor() as cur:
+        cur.execute('Select id from wish where name = %s ', (name,))
+        if cur.rowcount == 1:
             raise InvalidInput
-        cur.execute("INSERT INTO wish(name) values(%s)",(name,))
+        cur.execute("INSERT INTO wish(name) values(%s)", (name,))
         conn.commit()
         return cur.lastrowid
-        
+
 
 if __name__ == '__main__':
     pass
