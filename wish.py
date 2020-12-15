@@ -29,6 +29,8 @@ def wishes():
 
 
 def create_wish(name):
+    name.strip()
+
     if re.search(r'^[\w\d\s]+$', name) is None:
         raise InvalidInput
 
@@ -42,4 +44,4 @@ def create_wish(name):
 
 
 if __name__ == '__main__':
-    pass
+    create_wish("<script></script>")
