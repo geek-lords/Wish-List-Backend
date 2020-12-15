@@ -29,7 +29,7 @@ def wishes():
 
 
 def create_wish(name):
-    if re.search('^[\w\d\s]+$', name) is None:
+    if re.search(r'^[\w\d\s]+$', name) is None:
         raise InvalidInput
 
     with connection() as conn, conn.cursor() as cur:
