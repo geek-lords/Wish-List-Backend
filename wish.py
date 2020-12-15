@@ -44,4 +44,4 @@ def create_wish(name):
 
 
 if __name__ == '__main__':
-    create_wish("<script></script>")
+    pass
